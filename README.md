@@ -10,6 +10,12 @@ TODO
  - LowPoly
  - 卡通化？
 
+Related Resouces:
+
+ - Tesseract
+ - Potrace
+ - pypotrace
+
 LICENSE
 ---
 
