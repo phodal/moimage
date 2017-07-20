@@ -16,6 +16,15 @@ Related Resouces:
  - Potrace
  - pypotrace
 
+LowPloy
+---
+
+Requirements
+
+ - pango
+
+
+
 图片转矢量
 ---
 
