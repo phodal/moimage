@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/phodal/moImage#readme",
   "dependencies": {
+    "commander": "^2.11.0",
     "triangulate-image": "^0.5.1"
   }
 }

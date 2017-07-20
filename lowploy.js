@@ -1,13 +1,25 @@
 var triangulate = require('triangulate-image');
+var program = require('commander');
 var fs = require('fs');
 
-fs.readFile( './flower.jpg', function ( err, buffer ) {
-	if ( err ) { throw err; }
-		
-	var svgMarkup = triangulate().fromBufferSync( buffer ).toSVGSync();
+program.version('0.1.0');
 
-	fs.writeFile( './flower.svg', svgMarkup, function ( err ) {
-		if ( err ) { throw err; }
-		console.log( 'created an svg file.' );
-	} );
-} );
+program
+  .command('*')
+  .action(function(file){
+    console.log('convert "%s"', file);
+    var filePath = __dirname + '/' + file;
+    fs.readFile( filePath, function ( err, buffer ) {
+        if ( err ) { throw err; }
+            
+        var svgMarkup = triangulate().fromBufferSync( buffer ).toSVGSync();
+
+        fs.writeFile( './ouput.svg', svgMarkup, function ( err ) {
+            if ( err ) { throw err; }
+            console.log( 'created an svg file.' );
+        });
+    });
+  });
+
+program.parse(process.argv);
+  
