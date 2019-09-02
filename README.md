@@ -73,6 +73,12 @@ mov to mp4
 ffmpeg -i tree-expand.mov tree-expand.mp4
 ```
 
+fast video
+
+```
+ffmpeg -i out.mp4 -filter:v "setpts=PTS/60" fast.mp4
+```
+
 LICENSE
 ---
 
