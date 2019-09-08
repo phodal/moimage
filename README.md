@@ -79,6 +79,12 @@ fast video
 ffmpeg -i out.mp4 -filter:v "setpts=PTS/60" fast.mp4
 ```
 
+4k to 1080
+
+```
+ffmpeg -i 7.mp4 -vf scale=1920:1080 -c:v libx264 -crf 35 7-1080.mp4
+```
+
 LICENSE
 ---
 
